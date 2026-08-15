@@ -22,7 +22,7 @@ import profilePhoto from "../../assets/profile.jpg";
 import { useTheme } from "../../context/ThemeContext";
 
 const ROLES = [
-  "Senior Frontend Developer",
+  "Senior Software Developer",
   "React.js Developer",
   "Next.js Developer",
   "TypeScript Engineer",
@@ -158,21 +158,7 @@ export default function Hero() {
 
       <motion.div
         style={{ y: contentY, opacity: contentOpacity }}
-        className="
-max-w-[1320px]
-mx-auto
-px-6
-lg:px-10
-relative
-z-[2]
-grid
-grid-cols-1
-lg:grid-cols-[1fr_0.92fr]
-items-center
-gap-y-16
-lg:gap-x-28
-xl:gap-x-36
-"
+        className="max-w-[1320px] mx-auto px-6 lg:px-10 relative z-[2] grid grid-cols-1 lg:grid-cols-[1fr_0.92fr] items-center gap-y-16 lg:gap-x-28 xl:gap-x-36"
       >
         <motion.div variants={textStagger} initial="hidden" animate="show">
           <motion.div
@@ -205,30 +191,19 @@ xl:gap-x-36
 
           <motion.p
             variants={textItem}
-            className="
-max-w-[560px]
-text-[17px]
-leading-8
-mb-10
-"
+            className="max-w-[560px] text-[17px] leading-8 mb-10"
             style={{ color: textMuted }}
           >
             I design and build{" "}
             <strong style={{ color: textStrong }}>enterprise-grade</strong> web
-            applications with React.js and Next.js, six years of turning
-            complex Travel &amp; Hospitality product requirements into fast,
-            accessible interfaces.
+            applications with React.js and Next.js, six years of turning complex
+            Travel &amp; Hospitality product requirements into fast, accessible
+            interfaces.
           </motion.p>
 
           <motion.div
             variants={textItem}
-            className="
-flex
-flex-wrap
-gap-5
-mt-2
-mb-14
-"
+            className="flex flex-wrap gap-5 mt-2 mb-14"
           >
             <motion.a
               whileHover={{
@@ -237,23 +212,7 @@ mb-14
               }}
               whileTap={{ scale: 0.97 }}
               href="#contact"
-             className="
-group
-inline-flex
-items-center
-justify-center
-gap-3
-bg-accent
-text-[#2b1c00]
-font-semibold
-text-[15px]
-px-9
-py-[18px]
-rounded-full
-shadow-soft-sm
-transition-all
-duration-300
-"
+              className="group inline-flex items-center justify-center gap-3 bg-accent text-[#2b1c00] font-semibold text-[15px] px-9 py-[18px] rounded-full shadow-soft-sm transition-all duration-300"
             >
               Get in touch
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -261,22 +220,9 @@ duration-300
             <motion.a
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.97 }}
-              href="#"
+              href="/Resume-KD.pdf"
               download
-              className="
-inline-flex
-items-center
-justify-center
-gap-3
-border
-font-semibold
-text-[15px]
-px-9
-py-[18px]
-rounded-full
-transition-all
-duration-300
-"
+              className="inline-flex items-center justify-center gap-3 border font-semibold text-[15px] px-9 py-[18px] rounded-full transition-all duration-300"
               style={{ borderColor, color: textStrong }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = isDark
@@ -295,7 +241,7 @@ duration-300
             <motion.a
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.94 }}
-              href="https://github.com/"
+              href="https://github.com/khyati-dixit"
               target="_blank"
               rel="noopener"
               aria-label="GitHub"
@@ -307,7 +253,7 @@ duration-300
             <motion.a
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.94 }}
-              href="https://linkedin.com/"
+              href="https://linkedin.com/in/khyati-dixit-607b28199/"
               target="_blank"
               rel="noopener"
               aria-label="LinkedIn"
@@ -319,7 +265,7 @@ duration-300
             <motion.a
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.94 }}
-              href="mailto:khyati.dixit@example.com"
+              href="mailto:khyatidxt@gamil.com"
               aria-label="Email"
               className="w-[42px] h-[42px] rounded-full border flex items-center justify-center hover:bg-accent hover:border-accent hover:text-[#2b1c00] transition-colors"
               style={{ borderColor, color: textStrong }}
@@ -349,9 +295,7 @@ duration-300
           >
             <motion.div
               style={{ rotateX, rotateY }}
-              className="relative w-[310px]
-sm:w-[350px]
-lg:w-[390px] rounded-[32px] shadow-soft"
+              className="relative w-[310px] sm:w-[350px] lg:w-[390px] rounded-[32px] shadow-soft"
             >
               <div
                 className="rounded-[28px] p-[3px]"
@@ -364,9 +308,7 @@ lg:w-[390px] rounded-[32px] shadow-soft"
                   <img
                     src={profilePhoto}
                     alt="Khyati Dixit smiling, seated at a café table"
-                    className="w-full h-[380px]
-sm:h-[430px]
-lg:h-[470px] object-cover block"
+                    className="w-full h-[380px] sm:h-[430px] lg:h-[470px] object-cover block"
                   />
                 </div>
               </div>

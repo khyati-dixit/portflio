@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Sun,
-  Moon,
-  Menu,
-  X,
-  Download,
-  ArrowUpRight,
-} from "lucide-react";
+import { Sun, Moon, Menu, X, Download, ArrowUpRight } from "lucide-react";
 
 import { useTheme } from "../../context/ThemeContext";
 
@@ -33,7 +26,9 @@ export default function Navbar() {
   const textMuted = isDark ? "rgba(247,241,220,0.62)" : "var(--text-muted)";
   const pillBg = isDark ? "rgba(255,255,255,0.06)" : "rgba(255,255,255,0.2)";
   const iconBtnBg = isDark ? "rgba(255,255,255,0.08)" : "rgba(255,255,255,0.2)";
-  const iconBtnBgHover = isDark ? "rgba(255,255,255,0.14)" : "rgba(255,255,255,0.3)";
+  const iconBtnBgHover = isDark
+    ? "rgba(255,255,255,0.14)"
+    : "rgba(255,255,255,0.3)";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +53,7 @@ export default function Navbar() {
       },
       {
         rootMargin: "-40% 0px -50% 0px",
-      }
+      },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -69,38 +64,19 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-6 left-0 w-full z-[100] px-6 lg:px-10">
-
         <motion.div
           animate={{
             maxWidth: scrolled ? "1180px" : "1320px",
             y: scrolled ? -2 : 0,
           }}
           transition={{
-            duration: .35,
+            duration: 0.35,
             ease: "easeOut",
           }}
           className="mx-auto"
         >
-
           <div
-            className="
-            h-[74px]
-            rounded-full
-            flex
-            items-center
-            justify-between
-
-            px-8
-            lg:px-10
-
-            backdrop-blur-2xl
-
-            border
-
-            transition-all
-
-            duration-300
-          "
+            className="h-[74px] rounded-full flex items-center justify-between px-8 lg:px-10 backdrop-blur-2xl border transition-all duration-300"
             style={{
               background:
                 theme === "dark"
@@ -119,12 +95,8 @@ export default function Navbar() {
           >
             {/* LOGO */}
 
-            
-                         {/* LOGO */}
-            <a
-              href="#home"
-              className="flex flex-col flex-shrink-0"
-            >
+            {/* LOGO */}
+            <a href="#home" className="flex flex-col flex-shrink-0">
               <span
                 className="text-[30px] font-black tracking-tight"
                 style={{ color: textStrong }}
@@ -137,41 +109,26 @@ export default function Navbar() {
             {/* DESKTOP NAV */}
 
             <nav
-              className="
-              hidden
-              md:flex
-              items-center
-              gap-1
-              rounded-full
-              p-1
-            "
+              className="hidden md:flex items-center gap-1 rounded-full p-1"
               style={{ background: pillBg }}
             >
-              
               {LINKS.map((item) => (
-  <a
-    key={item.id}
-    href={`#${item.id}`}
-    className="
-      relative
-      px-5
-      py-3
-      rounded-full
-      text-[15px]
-      font-medium
-      transition-all
-      duration-300
-    "
-    style={{
-      color: active === item.id ? textStrong : textMuted,
-    }}
-    onMouseEnter={(e) => {
-      if (active !== item.id) e.currentTarget.style.color = textStrong;
-    }}
-    onMouseLeave={(e) => {
-      if (active !== item.id) e.currentTarget.style.color = textMuted;
-    }}
-  >
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  className="relative px-5 py-3 rounded-full text-[15px] font-medium transition-all duration-300"
+                  style={{
+                    color: active === item.id ? textStrong : textMuted,
+                  }}
+                  onMouseEnter={(e) => {
+                    if (active !== item.id)
+                      e.currentTarget.style.color = textStrong;
+                  }}
+                  onMouseLeave={(e) => {
+                    if (active !== item.id)
+                      e.currentTarget.style.color = textMuted;
+                  }}
+                >
                   {active === item.id && (
                     <motion.span
                       layoutId="navbar-pill"
@@ -191,9 +148,7 @@ export default function Navbar() {
                     />
                   )}
 
-                  <span className="relative z-10">
-                    {item.label}
-                  </span>
+                  <span className="relative z-10">{item.label}</span>
                 </a>
               ))}
             </nav>
@@ -201,30 +156,20 @@ export default function Navbar() {
             {/* RIGHT SIDE */}
 
             <div className="flex items-center gap-4">
-
               {/* THEME */}
 
               <motion.button
-                whileTap={{ scale: .94 }}
+                whileTap={{ scale: 0.94 }}
                 whileHover={{ scale: 1.05 }}
                 onClick={toggleTheme}
-                className="
-                w-11
-                h-11
-
-                rounded-full
-
-                flex
-
-                items-center
-
-                justify-center
-
-                transition
-              "
+                className="w-11 h-11 rounded-full flex items-center justify-center transition"
                 style={{ background: iconBtnBg }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = iconBtnBgHover)}
-                onMouseLeave={(e) => (e.currentTarget.style.background = iconBtnBg)}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.background = iconBtnBgHover)
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.background = iconBtnBg)
+                }
               >
                 {theme === "dark" ? (
                   <Sun size={18} style={{ color: textStrong }} />
@@ -240,44 +185,17 @@ export default function Navbar() {
                   y: -2,
                 }}
                 whileTap={{
-                  scale: .98,
+                  scale: 0.98,
                 }}
-                href="/Resume.pdf"
+                href="/Resume-KD.pdf"
                 download
-                className="
-                hidden
-
-                md:flex
-
-                items-center
-
-                gap-2
-
-                rounded-full
-
-                px-7
-
-                py-3.5
-
-                font-semibold
-
-                text-white
-
-                shadow-lg
-
-                transition-all
-
-                duration-300
-              "
+                className="hidden md:flex items-center gap-2 rounded-full px-7 py-3.5 font-semibold text-white shadow-lg transition-all duration-300"
                 style={{
-                  background:
-                    "linear-gradient(135deg,#2D4F2B,#708A58)",
+                  background: "linear-gradient(135deg,#2D4F2B,#708A58)",
                 }}
               >
                 <Download size={17} />
-
                 Download Resume
-
                 <ArrowUpRight size={16} />
               </motion.a>
 
@@ -285,34 +203,16 @@ export default function Navbar() {
 
               <button
                 onClick={() => setMenuOpen(true)}
-                className="
-                md:hidden
-
-                w-11
-
-                h-11
-
-                rounded-full
-
-                flex
-
-                items-center
-
-                justify-center
-              "
+                className="md:hidden w-11 h-11 rounded-full flex items-center justify-center"
                 style={{ background: iconBtnBg }}
               >
                 <Menu style={{ color: textStrong }} />
               </button>
-
             </div>
-
           </div>
-
         </motion.div>
-
       </header>
-            {/* ===========================
+      {/* ===========================
           MOBILE MENU
       ============================ */}
 
@@ -340,21 +240,7 @@ export default function Navbar() {
                 duration: 0.45,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="
-                fixed
-                right-0
-                top-0
-                z-[120]
-                h-full
-                w-[86%]
-                max-w-[420px]
-                p-8
-
-                flex
-                flex-col
-
-                backdrop-blur-3xl
-              "
+              className="fixed right-0 top-0 z-[120] h-full w-[86%] max-w-[420px] p-8 flex flex-col backdrop-blur-3xl"
               style={{
                 background:
                   theme === "dark"
@@ -365,10 +251,11 @@ export default function Navbar() {
               {/* HEADER */}
 
               <div className="flex items-center justify-between">
-
                 <div>
-
-                  <h2 className="text-[32px] font-black" style={{ color: textStrong }}>
+                  <h2
+                    className="text-[32px] font-black"
+                    style={{ color: textStrong }}
+                  >
                     Khyati
                     <span className="text-accent">.</span>
                   </h2>
@@ -377,32 +264,19 @@ export default function Navbar() {
                     className="uppercase tracking-[3px] text-xs mt-1"
                     style={{ color: textMuted }}
                   >
-                    Senior Frontend Developer
+                    Senior Software Developer
                   </p>
-
                 </div>
 
                 <motion.button
-                  whileTap={{ scale: .92 }}
+                  whileTap={{ scale: 0.92 }}
                   whileHover={{ rotate: 90 }}
                   onClick={() => setMenuOpen(false)}
-                  className="
-                    h-11
-                    w-11
-
-                    rounded-full
-
-                    flex
-
-                    items-center
-
-                    justify-center
-                  "
+                  className="h-11 w-11 rounded-full flex items-center justify-center"
                   style={{ background: iconBtnBg }}
                 >
                   <X size={20} style={{ color: textStrong }} />
                 </motion.button>
-
               </div>
 
               {/* NAVIGATION */}
@@ -422,7 +296,6 @@ export default function Navbar() {
                 className="mt-16 flex flex-col"
               >
                 {LINKS.map((item) => (
-
                   <motion.a
                     key={item.id}
                     variants={{
@@ -437,22 +310,13 @@ export default function Navbar() {
                     }}
                     href={`#${item.id}`}
                     onClick={() => setMenuOpen(false)}
-                    className="
-                      py-5
-
-                      border-b
-
-                      flex
-
-                      items-center
-
-                      justify-between
-
-                      group
-                    "
-                    style={{ borderColor: isDark ? "rgba(247,241,220,0.12)" : "rgba(45,79,43,0.1)" }}
+                    className="py-5 border-b flex items-center justify-between group"
+                    style={{
+                      borderColor: isDark
+                        ? "rgba(247,241,220,0.12)"
+                        : "rgba(45,79,43,0.1)",
+                    }}
                   >
-
                     <span
                       className="text-[34px] font-bold transition-colors"
                       style={{ color: textStrong }}
@@ -463,38 +327,23 @@ export default function Navbar() {
                     <span className="text-sm" style={{ color: textMuted }}>
                       0{LINKS.indexOf(item) + 1}
                     </span>
-
                   </motion.a>
-
                 ))}
               </motion.div>
 
               {/* FOOTER */}
 
               <div className="mt-auto">
-
                 {/* Theme */}
 
                 <div className="flex items-center justify-between mb-5">
-
                   <span className="font-medium" style={{ color: textStrong }}>
                     Appearance
                   </span>
 
                   <button
                     onClick={toggleTheme}
-                    className="
-                      w-14
-                      h-8
-
-                      rounded-full
-
-                      flex
-
-                      items-center
-
-                      px-1
-                    "
+                    className="w-14 h-8 rounded-full flex items-center px-1"
                     style={{ background: iconBtnBg }}
                   >
                     <motion.div
@@ -504,30 +353,19 @@ export default function Navbar() {
                         stiffness: 350,
                         damping: 28,
                       }}
-                      className="
-                        h-6
-                        w-6
-
-                        rounded-full
-
-                        flex
-
-                        items-center
-
-                        justify-center
-                      "
+                      className="h-6 w-6 rounded-full flex items-center justify-center"
                       style={{
                         background: textStrong,
                         marginLeft: theme === "dark" ? "auto" : 0,
                       }}
                     >
-                      {theme === "dark"
-                        ? <Moon size={12} color={isDark ? "#121919" : "white"} />
-                        : <Sun size={12} color="white" />
-                      }
+                      {theme === "dark" ? (
+                        <Moon size={12} color={isDark ? "#121919" : "white"} />
+                      ) : (
+                        <Sun size={12} color="white" />
+                      )}
                     </motion.div>
                   </button>
-
                 </div>
 
                 {/* Resume */}
@@ -537,48 +375,23 @@ export default function Navbar() {
                     y: -2,
                   }}
                   whileTap={{
-                    scale: .98,
+                    scale: 0.98,
                   }}
-                  href="/Resume.pdf"
+                  href="/Resume-KD.pdf"
                   download
-                  className="
-                    w-full
-
-                    flex
-
-                    items-center
-
-                    justify-center
-
-                    gap-3
-
-                    rounded-full
-
-                    py-4
-
-                    font-semibold
-
-                    text-white
-                  "
+                  className="w-full flex items-center justify-center gap-3 rounded-full py-4 font-semibold text-white"
                   style={{
-                    background:
-                      "linear-gradient(135deg,#2D4F2B,#708A58)",
+                    background: "linear-gradient(135deg,#2D4F2B,#708A58)",
                   }}
                 >
                   <Download size={18} />
-
                   Download Resume
-
                 </motion.a>
-
               </div>
-
             </motion.aside>
-
           </>
         )}
       </AnimatePresence>
-
     </>
   );
 }

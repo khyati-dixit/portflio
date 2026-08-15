@@ -23,7 +23,11 @@ export default function Loader() {
               <motion.div
                 className="h-full w-[40%] bg-accent absolute"
                 animate={{ x: ["-100%", "150%", "300%"] }}
-                transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 1.1,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               />
             </div>
           </div>

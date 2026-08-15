@@ -21,9 +21,9 @@ const SKILLS = [
 ];
 
 const CAREER = [
-  { company: "Value Coders", note: "Current" },
+  { company: "Cybage Software", note: "Current" },
   { company: "Publicis Groupe", note: "Prior" },
-  { company: "Cybage Software", note: "Prior" },
+  { company: "Value Coders", note: "Prior" },
 ];
 
 const container = {
@@ -32,11 +32,18 @@ const container = {
 };
 const rise = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.2, 0.7, 0.2, 1] } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.2, 0.7, 0.2, 1] },
+  },
 };
 const lineDraw = {
   hidden: { scaleY: 0 },
-  show: { scaleY: 1, transition: { duration: 0.9, ease: [0.2, 0.7, 0.2, 1], delay: 0.3 } },
+  show: {
+    scaleY: 1,
+    transition: { duration: 0.9, ease: [0.2, 0.7, 0.2, 1], delay: 0.3 },
+  },
 };
 
 export default function About() {
@@ -53,7 +60,9 @@ export default function About() {
   const textMuted = isDark ? "rgba(247,241,220,0.6)" : "var(--text-muted)";
   const dividerColor = isDark ? "rgba(247,241,220,0.14)" : "var(--border)";
   const pillHoverBg = isDark ? "rgba(247,241,220,0.08)" : "rgba(0,0,0,0.04)";
-  const iconBgSecondary = isDark ? "rgba(232,200,122,0.16)" : "var(--secondary)/20";
+  const iconBgSecondary = isDark
+    ? "rgba(232,200,122,0.16)"
+    : "var(--secondary)/20";
   const iconBgAccent = isDark ? "rgba(255,184,35,0.18)" : "var(--accent)/20";
 
   return (
@@ -84,7 +93,8 @@ export default function About() {
             className="font-display text-[clamp(28px,3.6vw,42px)] mb-7 leading-[1.15]"
           >
             Building interfaces that hold up at{" "}
-            <span className="text-accent italic font-medium">enterprise</span> scale.
+            <span className="text-accent italic font-medium">enterprise</span>{" "}
+            scale.
           </motion.h2>
 
           <motion.p
@@ -92,18 +102,26 @@ export default function About() {
             style={{ color: textMuted }}
             className="text-base leading-relaxed mb-8 max-w-[520px]"
           >
-            I&apos;m a <strong style={{ color: textStrong }} className="font-semibold">Senior Frontend Developer</strong> with
-            six-plus years building enterprise web applications in React and Next.js. My work sits at the
-            intersection of clean architecture, performance and product craft.
+            I&apos;m a{" "}
+            <strong style={{ color: textStrong }} className="font-semibold">
+              Senior Software Developer
+            </strong>{" "}
+            with six-plus years building enterprise web applications in React
+            and Next.js. My work sits at the intersection of clean architecture,
+            performance and product craft.
           </motion.p>
 
-          <motion.div variants={rise} className="relative pl-7 my-9 max-w-[500px]">
+          <motion.div
+            variants={rise}
+            className="relative pl-7 my-9 max-w-[500px]"
+          >
             <Quote className="w-5 h-5 text-accent absolute left-0 top-1" />
             <blockquote
               style={{ color: textStrong }}
               className="font-display italic text-[19px] sm:text-[21px] leading-snug"
             >
-              I care as much about the render tree as I do about the person waiting on it.
+              I care as much about the render tree as I do about the person
+              waiting on it.
             </blockquote>
           </motion.div>
 
@@ -112,8 +130,9 @@ export default function About() {
             style={{ color: textMuted }}
             className="text-base leading-relaxed mb-9 max-w-[520px]"
           >
-            Across roles at Cybage Software, Publicis Groupe and Value Coders, I&apos;ve led release coordination,
-            migrated CI/CD pipelines and mentored teams through Agile delivery, keeping the everyday focus on
+            Across roles at Cybage Software, Publicis Groupe and Value Coders,
+            I&apos;ve led release coordination, migrated CI/CD pipelines and
+            mentored teams through Agile delivery, keeping the everyday focus on
             interfaces that are fast, accessible and easy to maintain.
           </motion.p>
 
@@ -124,7 +143,8 @@ export default function About() {
             style={{ color: textStrong }}
             className="inline-flex items-center gap-2 font-mono text-[12.5px] border-b border-accent pb-0.5"
           >
-            See the full experience timeline <ArrowRight className="w-3.5 h-3.5" />
+            See the full experience timeline{" "}
+            <ArrowRight className="w-3.5 h-3.5" />
           </motion.a>
         </motion.div>
 
@@ -159,7 +179,10 @@ export default function About() {
                   </div>
                 </div>
                 {i < STATS.length - 1 && (
-                  <div style={{ background: dividerColor }} className="w-px mx-2" />
+                  <div
+                    style={{ background: dividerColor }}
+                    className="w-px mx-2"
+                  />
                 )}
               </React.Fragment>
             ))}
@@ -173,13 +196,22 @@ export default function About() {
                   style={{ background: iconBgSecondary }}
                   className="w-9 h-9 rounded-full flex items-center justify-center"
                 >
-                  <Globe2 className="w-[16px] h-[16px]" style={{ color: textStrong }} />
+                  <Globe2
+                    className="w-[16px] h-[16px]"
+                    style={{ color: textStrong }}
+                  />
                 </div>
                 <div>
-                  <p style={{ color: textStrong }} className="text-[13.5px] font-semibold mb-1 leading-snug">
+                  <p
+                    style={{ color: textStrong }}
+                    className="text-[13.5px] font-semibold mb-1 leading-snug"
+                  >
                     Travel &amp; Hospitality
                   </p>
-                  <p style={{ color: textMuted }} className="text-[12px] leading-snug">
+                  <p
+                    style={{ color: textMuted }}
+                    className="text-[12px] leading-snug"
+                  >
                     Booking flows, itineraries, guest platforms
                   </p>
                 </div>
@@ -192,13 +224,22 @@ export default function About() {
                   style={{ background: iconBgAccent }}
                   className="w-9 h-9 rounded-full flex items-center justify-center"
                 >
-                  <Trophy className="w-[16px] h-[16px]" style={{ color: textStrong }} />
+                  <Trophy
+                    className="w-[16px] h-[16px]"
+                    style={{ color: textStrong }}
+                  />
                 </div>
                 <div>
-                  <p style={{ color: textStrong }} className="text-[13.5px] font-semibold mb-1 leading-snug">
+                  <p
+                    style={{ color: textStrong }}
+                    className="text-[13.5px] font-semibold mb-1 leading-snug"
+                  >
                     Agentic AI Day
                   </p>
-                  <p style={{ color: textMuted }} className="text-[12px] leading-snug">
+                  <p
+                    style={{ color: textMuted }}
+                    className="text-[12px] leading-snug"
+                  >
                     Google Cloud hackathon placement
                   </p>
                 </div>
@@ -259,10 +300,15 @@ export default function About() {
                 {CAREER.map((c) => (
                   <div key={c.company} className="relative">
                     <span
-                      style={{ boxShadow: `0 0 0 4px ${isDark ? "#121919" : "var(--surface)"}` }}
+                      style={{
+                        boxShadow: `0 0 0 4px ${isDark ? "#121919" : "var(--surface)"}`,
+                      }}
                       className="absolute -left-[27px] top-1.5 w-2 h-2 rounded-full bg-accent"
                     />
-                    <p style={{ color: textStrong }} className="text-[14px] font-semibold leading-tight">
+                    <p
+                      style={{ color: textStrong }}
+                      className="text-[14px] font-semibold leading-tight"
+                    >
                       {c.company}
                     </p>
                     <p
