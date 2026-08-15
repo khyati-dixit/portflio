@@ -20,18 +20,30 @@ const ROLES = [
   {
     role: "Frontend Developer",
     company: "Publicis Groupe",
-    bullets: ["Responsive UI development", "UX improvements across product lines", "Agile collaboration with design & QA"],
+    bullets: [
+      "Responsive UI development",
+      "UX improvements across product lines",
+      "Agile collaboration with design & QA",
+    ],
   },
   {
     role: "Software Developer",
     company: "Value Coders",
-    bullets: ["Web application development", "Delivery across client projects", "UI implementation from design specs"],
+    bullets: [
+      "Web application development",
+      "Delivery across client projects",
+      "UI implementation from design specs",
+    ],
   },
 ];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.2, 0.7, 0.2, 1] } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.2, 0.7, 0.2, 1] },
+  },
 };
 
 const bulletFade = {
@@ -59,7 +71,12 @@ export default function Experience() {
   return (
     <section id="experience" className="pt-16 pb-28 md:pt-20 md:pb-32">
       <div className="max-w-[1180px] mx-auto px-8">
-        <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <span
             style={{ color: textSecondary }}
             className="inline-flex items-center gap-2.5 font-mono text-[12.5px] tracking-[0.14em] uppercase mb-4.5 before:content-[''] before:w-5.5 before:h-px before:bg-accent"
@@ -70,10 +87,15 @@ export default function Experience() {
             style={{ color: textStrong }}
             className="font-display text-[clamp(28px,4vw,44px)] mb-4 leading-tight tracking-tight"
           >
-            Six years, <span className="text-accent italic font-medium">three</span> teams.
+            Six years,{" "}
+            <span className="text-accent italic font-medium">three</span> teams.
           </h2>
-          <p style={{ color: textMuted }} className="max-w-[560px] text-base mb-14 leading-relaxed">
-            A chronological look at where I&apos;ve built — most recent role first.
+          <p
+            style={{ color: textMuted }}
+            className="max-w-[560px] text-base mb-14 leading-relaxed"
+          >
+            A chronological look at where I&apos;ve built — most recent role
+            first.
           </p>
         </motion.div>
 
@@ -81,7 +103,10 @@ export default function Experience() {
           {/* animated timeline line */}
           <motion.div
             className="absolute left-[9px] top-1.5 w-0.5 rounded-full origin-top"
-            style={{ background: "linear-gradient(180deg, var(--accent), var(--secondary) 50%, var(--primary))" }}
+            style={{
+              background:
+                "linear-gradient(180deg, var(--accent), var(--secondary) 50%, var(--primary))",
+            }}
             initial={{ scaleY: 0, height: "100%" }}
             whileInView={{ scaleY: 1 }}
             viewport={{ once: true, amount: 0.1 }}
@@ -106,12 +131,23 @@ export default function Experience() {
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.12 + 0.3, type: "spring", stiffness: 300, damping: 15 }}
+                  transition={{
+                    delay: i * 0.12 + 0.3,
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 15,
+                  }}
                 >
                   <motion.div
                     className="w-2 h-2 rounded-full bg-accent"
-                    animate={r.tag ? { scale: [1, 1.4, 1], opacity: [1, 0.6, 1] } : {}}
-                    transition={r.tag ? { duration: 2, repeat: Infinity, ease: "easeInOut" } : {}}
+                    animate={
+                      r.tag ? { scale: [1, 1.4, 1], opacity: [1, 0.6, 1] } : {}
+                    }
+                    transition={
+                      r.tag
+                        ? { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                        : {}
+                    }
                   />
                 </motion.div>
 
@@ -137,10 +173,24 @@ export default function Experience() {
                       </div>
                       {r.tag && (
                         <motion.span
-                          style={{ color: textStrong, background: tagBg, borderColor: tagBorder }}
+                          style={{
+                            color: textStrong,
+                            background: tagBg,
+                            borderColor: tagBorder,
+                          }}
                           className="font-mono text-[11.5px] border px-3 py-1.5 rounded-full whitespace-nowrap"
-                          animate={{ boxShadow: ["0 0 0px rgba(0,0,0,0)", "0 0 12px var(--accent)", "0 0 0px rgba(0,0,0,0)"] }}
-                          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                          animate={{
+                            boxShadow: [
+                              "0 0 0px rgba(0,0,0,0)",
+                              "0 0 12px var(--accent)",
+                              "0 0 0px rgba(0,0,0,0)",
+                            ],
+                          }}
+                          transition={{
+                            duration: 2.5,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                          }}
                         >
                           {r.tag}
                         </motion.span>
@@ -158,7 +208,10 @@ export default function Experience() {
                           style={{ color: textMuted }}
                           className="flex gap-2.5 text-[14.5px] items-start leading-relaxed"
                         >
-                          <ArrowRight className="w-3.5 h-3.5 mt-1 flex-shrink-0" style={{ color: textSecondary }} />
+                          <ArrowRight
+                            className="w-3.5 h-3.5 mt-1 flex-shrink-0"
+                            style={{ color: textSecondary }}
+                          />
                           {b}
                         </motion.li>
                       ))}

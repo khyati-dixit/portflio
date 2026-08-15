@@ -1,7 +1,12 @@
 import React from "react";
 import { useTheme } from "../../context/ThemeContext";
 
-export default function FloatingBadge({ icon: Icon, label, className = "", delay = 0 }) {
+export default function FloatingBadge({
+  icon: Icon,
+  label,
+  className = "",
+  delay = 0,
+}) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
   const textColor = isDark ? "#F7F1DC" : "var(--primary)";

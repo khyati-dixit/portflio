@@ -12,8 +12,12 @@ const LINKS = [
 ];
 
 const SOCIALS = [
-  { href: "https://github.com/", icon: Github, label: "GitHub" },
-  { href: "https://linkedin.com/", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://github.com/khyati-dixit", icon: Github, label: "GitHub" },
+  {
+    href: "https://linkedin.com/in/khyati-dixit-607b28199/",
+    icon: Linkedin,
+    label: "LinkedIn",
+  },
 ];
 
 const fadeUp = {
@@ -50,22 +54,38 @@ export default function Footer() {
         transition={{ duration: 0.8, ease: [0.2, 0.7, 0.2, 1] }}
         className="relative max-w-[1180px] mx-8 xl:mx-auto rounded-[28px] px-6 sm:px-12 py-20 text-center overflow-hidden"
         style={{
-          background: "linear-gradient(135deg, #0f2818 0%, #16351f 45%, #1c2e17 100%)",
+          background:
+            "linear-gradient(135deg, #0f2818 0%, #16351f 45%, #1c2e17 100%)",
           boxShadow: "0 30px 80px -20px rgba(0,0,0,0.5)",
         }}
       >
         {/* drifting glow orbs */}
         <motion.div
           className="absolute w-[420px] h-[420px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(255,184,35,0.28), transparent 65%)", top: "-15%", left: "-10%" }}
+          style={{
+            background:
+              "radial-gradient(circle, rgba(255,184,35,0.28), transparent 65%)",
+            top: "-15%",
+            left: "-10%",
+          }}
           animate={{ x: [0, 40, 0], y: [0, 30, 0] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
           className="absolute w-[320px] h-[320px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(255,184,35,0.18), transparent 65%)", bottom: "-20%", right: "-5%" }}
+          style={{
+            background:
+              "radial-gradient(circle, rgba(255,184,35,0.18), transparent 65%)",
+            bottom: "-20%",
+            right: "-5%",
+          }}
           animate={{ x: [0, -30, 0], y: [0, -20, 0] }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          transition={{
+            duration: 14,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
         />
 
         <motion.span
@@ -86,7 +106,8 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="relative z-[1] font-display text-[clamp(30px,4.5vw,46px)] text-[#fbf6e3] mb-4.5 leading-tight tracking-tight"
         >
-          Have a project <span className="text-accent italic font-medium">in mind</span>?
+          Have a project{" "}
+          <span className="text-accent italic font-medium">in mind</span>?
         </motion.h2>
 
         <motion.p
@@ -96,7 +117,8 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.18 }}
           className="relative z-[1] text-[rgba(251,246,227,0.75)] mb-9 max-w-[440px] mx-auto leading-relaxed"
         >
-          I&apos;m currently open to senior frontend roles and select contract engagements.
+          I&apos;m currently open to senior frontend roles and select contract
+          engagements.
         </motion.p>
 
         <motion.a
@@ -105,7 +127,10 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.26 }}
-          whileHover={{ y: -3, boxShadow: "0 16px 32px -10px rgba(255,184,35,0.5)" }}
+          whileHover={{
+            y: -3,
+            boxShadow: "0 16px 32px -10px rgba(255,184,35,0.5)",
+          }}
           whileTap={{ scale: 0.97 }}
           className="relative z-[1] inline-flex items-center gap-2.5 bg-accent text-[#2b1c00] font-semibold text-[14.5px] px-7 py-4 rounded-full"
         >
@@ -199,8 +224,12 @@ export default function Footer() {
         <div style={{ background: borderColor }} className="h-px w-full mb-6" />
       </div>
 
-      <p style={{ color: textMuted }} className="font-mono text-xs tracking-wide text-center pb-8">
-        © {year} Khyati Dixit. Built with React, Vite, Tailwind CSS &amp; Framer Motion.
+      <p
+        style={{ color: textMuted }}
+        className="font-mono text-xs tracking-wide text-center pb-8"
+      >
+        © {year} Khyati Dixit. Built with React, Vite, Tailwind CSS &amp; Framer
+        Motion.
       </p>
     </footer>
   );

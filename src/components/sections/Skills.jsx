@@ -63,9 +63,13 @@ export default function Skills() {
   // text-heading/text-body/text-primary classes are tuned for the light
   // palette, so pills washed out pale and text lost contrast in dark mode.
   const textStrong = isDark ? "#F7F1DC" : "var(--primary)";
-  const textMuted = isDark ? "rgba(247,241,220,0.62)" : "var(--text-body, var(--text-muted))";
+  const textMuted = isDark
+    ? "rgba(247,241,220,0.62)"
+    : "var(--text-body, var(--text-muted))";
   const iconBoxBg = isDark ? "rgba(247,241,220,0.08)" : "var(--primary)/10";
-  const iconBoxBgSecondary = isDark ? "rgba(232,200,122,0.14)" : "var(--secondary)/15";
+  const iconBoxBgSecondary = isDark
+    ? "rgba(232,200,122,0.14)"
+    : "var(--secondary)/15";
   const iconBoxBgAccent = isDark ? "rgba(255,184,35,0.16)" : "var(--accent)/20";
   const pillBg = isDark ? "rgba(247,241,220,0.06)" : "#FBF6E8";
   const pillBorder = isDark ? "rgba(247,241,220,0.14)" : "var(--border)";
@@ -101,7 +105,11 @@ export default function Skills() {
         >
           <motion.span
             variants={item}
-            style={{ background: badgeBg, borderColor: badgeBorder, color: textStrong }}
+            style={{
+              background: badgeBg,
+              borderColor: badgeBorder,
+              color: textStrong,
+            }}
             className="inline-flex items-center gap-2 rounded-full border backdrop-blur-xl px-5 py-2 text-xs tracking-[0.28em] uppercase"
           >
             <Sparkles className="w-3.5 h-3.5" />
@@ -150,10 +158,16 @@ export default function Skills() {
                   <Code2 className="w-7 h-7" style={{ color: textStrong }} />
                 </div>
                 <div>
-                  <p style={{ color: textStrong }} className="uppercase tracking-[0.25em] text-xs">
+                  <p
+                    style={{ color: textStrong }}
+                    className="uppercase tracking-[0.25em] text-xs"
+                  >
                     Interface
                   </p>
-                  <h3 style={{ color: textStrong }} className="font-display text-3xl">
+                  <h3
+                    style={{ color: textStrong }}
+                    className="font-display text-3xl"
+                  >
                     Frontend
                   </h3>
                 </div>
@@ -163,7 +177,11 @@ export default function Skills() {
                   <motion.span
                     key={skill}
                     whileHover={{ y: -4, scale: 1.05 }}
-                    style={{ background: pillBg, borderColor: pillBorder, color: textStrong }}
+                    style={{
+                      background: pillBg,
+                      borderColor: pillBorder,
+                      color: textStrong,
+                    }}
                     className="px-4 py-2.5 rounded-full border text-sm font-medium"
                   >
                     {skill}
@@ -184,10 +202,16 @@ export default function Skills() {
                   <Cpu className="w-7 h-7" style={{ color: textStrong }} />
                 </div>
                 <div>
-                  <p style={{ color: textStrong }} className="uppercase tracking-[0.25em] text-xs">
+                  <p
+                    style={{ color: textStrong }}
+                    className="uppercase tracking-[0.25em] text-xs"
+                  >
                     Engineering
                   </p>
-                  <h3 style={{ color: textStrong }} className="font-display text-3xl">
+                  <h3
+                    style={{ color: textStrong }}
+                    className="font-display text-3xl"
+                  >
                     Architecture
                   </h3>
                 </div>
@@ -219,10 +243,16 @@ export default function Skills() {
                   <Wrench className="w-7 h-7" style={{ color: textStrong }} />
                 </div>
                 <div>
-                  <p style={{ color: textStrong }} className="uppercase tracking-[0.25em] text-xs">
+                  <p
+                    style={{ color: textStrong }}
+                    className="uppercase tracking-[0.25em] text-xs"
+                  >
                     Workflow
                   </p>
-                  <h3 style={{ color: textStrong }} className="font-display text-3xl">
+                  <h3
+                    style={{ color: textStrong }}
+                    className="font-display text-3xl"
+                  >
                     Tools
                   </h3>
                 </div>
@@ -237,7 +267,11 @@ export default function Skills() {
                       rotate: index % 2 === 0 ? 2 : -2,
                     }}
                     transition={{ type: "spring", stiffness: 320 }}
-                    style={{ background: pillBg, borderColor: pillBorder, color: textStrong }}
+                    style={{
+                      background: pillBg,
+                      borderColor: pillBorder,
+                      color: textStrong,
+                    }}
                     className="flex items-center gap-2.5 rounded-full border px-5 py-3 text-sm font-medium"
                   >
                     <span className="w-2 h-2 rounded-full bg-accent animate-pulse flex-shrink-0" />
@@ -265,10 +299,16 @@ export default function Skills() {
                   <Sparkles className="w-7 h-7" style={{ color: textStrong }} />
                 </div>
                 <div>
-                  <p style={{ color: textStrong }} className="uppercase tracking-[0.25em] text-xs">
+                  <p
+                    style={{ color: textStrong }}
+                    className="uppercase tracking-[0.25em] text-xs"
+                  >
                     Exploring
                   </p>
-                  <h3 style={{ color: textStrong }} className="font-display text-3xl">
+                  <h3
+                    style={{ color: textStrong }}
+                    className="font-display text-3xl"
+                  >
                     Currently Learning
                   </h3>
                 </div>
@@ -284,7 +324,10 @@ export default function Skills() {
                     <span style={{ color: textStrong }} className="font-medium">
                       {skill}
                     </span>
-                    <ArrowUpRight className="w-4 h-4" style={{ color: textStrong }} />
+                    <ArrowUpRight
+                      className="w-4 h-4"
+                      style={{ color: textStrong }}
+                    />
                   </motion.div>
                 ))}
               </div>
@@ -305,10 +348,16 @@ export default function Skills() {
             className="flex items-center justify-between flex-wrap gap-4 mb-10"
           >
             <div>
-              <p style={{ color: textStrong }} className="uppercase tracking-[0.25em] text-xs mb-2">
+              <p
+                style={{ color: textStrong }}
+                className="uppercase tracking-[0.25em] text-xs mb-2"
+              >
                 Daily Stack
               </p>
-              <h3 style={{ color: textStrong }} className="font-display text-4xl">
+              <h3
+                style={{ color: textStrong }}
+                className="font-display text-4xl"
+              >
                 Featured Technologies
               </h3>
             </div>
@@ -331,7 +380,11 @@ export default function Skills() {
                   rotate: index % 2 === 0 ? 2 : -2,
                 }}
                 transition={{ type: "spring", stiffness: 320 }}
-                style={{ background: pillBg, borderColor: pillBorder, color: textStrong }}
+                style={{
+                  background: pillBg,
+                  borderColor: pillBorder,
+                  color: textStrong,
+                }}
                 className="flex items-center gap-2.5 rounded-full border px-5 py-3 text-sm font-medium"
               >
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse flex-shrink-0" />
